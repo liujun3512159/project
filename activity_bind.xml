@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f2f6" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f2f6"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#ffffff" >
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:src="@drawable/selector_back_btn" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_title_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="绑定考勤卡"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/view_title_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="考勤卡号*"
+                android:textColor="#565658"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/card_title"
+                android:background="@drawable/edit_kq"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:hint="请输入考勤卡号"
+                android:maxLength="10"
+                android:numeric="integer"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="#323335"
+                android:textColorHint="#d7d8da"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/number"
+                android:layout_below="@id/number"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="提示:卡号在考勤卡正面底部"
+                android:textColor="#f6aab7"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/holder_rel_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="持卡人关系*"
+                android:textColor="#565658"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/holder_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/holder_rel_title"
+                android:background="@drawable/edit_kq"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:hint="请输入持卡人关系"
+                android:maxLength="10"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="#323335"
+                android:textColorHint="#d7d8da"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/card_name_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="持卡人名称"
+                android:textColor="#565658"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/card_name_title"
+                android:background="@drawable/edit_kq"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:hint="请输入持卡人姓名"
+                android:maxLength="10"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="#323335"
+                android:textColorHint="#d7d8da"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/mobile_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="手机号码"
+                android:textColor="#565658"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mobile_title"
+                android:background="@drawable/edit_kq"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:hint="请输入持卡人手机号码"
+                android:maxLength="11"
+                android:numeric="integer"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="#323335"
+                android:textColorHint="#d7d8da"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/notice_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:hint="请上传持卡人照片"
+                android:singleLine="true"
+                android:textColor="#d7d8da"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:id="@+id/face_bg"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/notice_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_bind_shape" >
+
+                <com.djt.personreadbean.common.view.RoundImageView
+                    android:id="@+id/head_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/kq_head" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/notice_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/face_bg"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="提示:推荐上传上半身照片"
+                android:textColor="#f6aab7"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#505a75"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/finish"
+                style="@style/text_title_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="绑 定"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
